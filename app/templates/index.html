@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Comment LLM Analyzer</title>
+</head>
+<body>
+  <h1>Comment LLM Analyzer</h1>
+
+  <p>
+    Upload a CSV file with a <code>comment_text</code> column.
+    Enter the access token to use the tool.
+  </p>
+
+  <form action="/analyze" method="post" enctype="multipart/form-data">
+    <div>
+      <label>Access Token:</label>
+      <input type="password" name="token" required>
+    </div>
+    <br>
+    <div>
+      <label>CSV File:</label>
+      <input type="file" name="file" accept=".csv" required>
+    </div>
+    <br>
+    <button type="submit">Analyze Comments</button>
+  </form>
+</body>
+</html>
